@@ -5,9 +5,10 @@ const url = core.getInput('url');
 const tag = core.getInput('tag');
 const token = core.getInput('token');
 
-const board_id = 1735243687
-const group = "new_group51785"
+const board_id = 1735243687;
+const group = "new_group51785";
 
+const current = new Date();
 const cDate = [String(current.getUTCFullYear()), String(current.getUTCMonth() + 1).padStart(2, '0'), String(current.getUTCDate()).padStart(2, '0')].join('-');
 const cTime = [String(current.getUTCHours()).padStart(2, '0'), String(current.getUTCMinutes()).padStart(2, '0'), String(current.getUTCSecods()).padStart(2, '0')].join(':');
 
