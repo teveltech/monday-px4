@@ -1,4 +1,5 @@
 const fetch = require("node-fetch");
+const core = require('@actions/core');
 
 const url = core.getInput('url');
 const tag = core.getInput('tag');
@@ -34,4 +35,4 @@ fetch ("https://api.monday.com/v2", {
 })
   .then(res => res.json())
   .then(res => item_id = res["data"]["create_item"]["id"])
-  .then(() => console.log(item_id));
+  .then(() => core.setOutput('item-id', item_id));
