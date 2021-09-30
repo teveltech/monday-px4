@@ -1,0 +1,21 @@
+name: 'Add px4 release to monday'
+description: 'Add px4 release to monday'
+branding:
+  icon: 'anchor'
+  color: 'orange'
+inputs:
+  url:
+    description: ''
+    required: true
+  tag:
+    description: ''
+    required: true
+  token:
+    description: 'Github authentication token to use'
+    required: true
+outputs:
+  item-id: 
+    description: ''
+runs:
+  using: 'node12'
+  main: 'index.js'
