@@ -1,5 +1,5 @@
-name: 'Add px4 release to monday'
-description: 'Add px4 release to monday'
+name: 'Add px4 releases to monday'
+description: 'Add px4 releases to monday'
 branding:
   icon: 'anchor'
   color: 'orange'
@@ -11,7 +11,7 @@ inputs:
     description: ''
     required: true
   token:
-    description: 'Github authentication token to use'
+    description: 'Monday authentication token to use'
     required: true
 outputs:
   item-id: 
