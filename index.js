@@ -5,7 +5,7 @@ const url = core.getInput('url');
 const tag = core.getInput('tag');
 const token = core.getInput('token');
 
-const board_id = core.getInput('board-id');
+const board_id = Number(core.getInput('board-id'));
 const group = core.getInput('group');
 const link_column = core.getInput('link-column');
 const date_column = core.getInput('date-column');
@@ -16,7 +16,7 @@ const cTime = [String(current.getUTCHours()).padStart(2, '0'), String(current.ge
 
 let query = 'mutation ($board_id: Int!, $group: String!, $tag: String!, $columnValues:JSON!) { create_item (board_id:$board_id, group_id: $group, item_name:$tag, column_values: $columnValues) { id } }';
 let vars = {
-  board_id: 1735243687,
+  board_id: board_id,
   group: group,
   tag : tag,
   columnValues: `{
