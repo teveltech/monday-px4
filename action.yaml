@@ -5,13 +5,19 @@ branding:
   color: 'orange'
 inputs:
   url:
-    description: ''
     required: true
   tag:
-    description: ''
     required: true
   token:
     description: 'Monday authentication token to use'
+    required: true
+  board-id:
+    required: true
+  group:
+    required: true
+  link-column:
+    required: true
+  date-column:
     required: true
 outputs:
   item-id: 

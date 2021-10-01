@@ -5,8 +5,10 @@ const url = core.getInput('url');
 const tag = core.getInput('tag');
 const token = core.getInput('token');
 
-const board_id = 1735243687;
-const group = "new_group51785";
+const board_id = core.getInput('board-id');
+const group = core.getInput('group');
+const link_column = core.getInput('link-column');
+const date_column = core.getInput('date-column');
 
 const current = new Date();
 const cDate = [String(current.getUTCFullYear()), String(current.getUTCMonth() + 1).padStart(2, '0'), String(current.getUTCDate()).padStart(2, '0')].join('-');
@@ -18,8 +20,8 @@ let vars = {
   group: group,
   tag : tag,
   columnValues: `{
-    \"link3\" : {\"url\" : \"` + url + `\", \"text\": \"go to GitHub\"},
-    \"date\" : {\"date\" : \"` + cDate + `\", \"time\": \"` + cTime + `\"}
+    \"` + link_column + `\" : {\"url\" : \"` + url + `\", \"text\": \"go to GitHub\"},
+    \"` + date_column + `\" : {\"date\" : \"` + cDate + `\", \"time\": \"` + cTime + `\"}
   }`
   };
   
