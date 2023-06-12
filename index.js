@@ -37,5 +37,8 @@ fetch ("https://api.monday.com/v2", {
   })
 })
   .then(res => res.json())
-  .then(res => item_id = res["data"]["create_item"]["id"])
+  .then(res => {
+      core.info("RESPONSE!!!!", JSON.stringify(res, null ,4))
+      item_id = res["data"]["create_item"]["id"]  
+   })
   .then(() => core.setOutput('item-id', item_id));
