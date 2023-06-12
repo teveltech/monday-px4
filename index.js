@@ -38,7 +38,7 @@ let vars = {
 })
     .then(res => res.json())
     .then(res =>{
-        core.info("RES QUERY 2 !" + res)})
+        core.info("RES QUERY 2 !" + JSON.stringify(res, null ,4))})
 
 
 fetch ("https://api.monday.com/v2", {
